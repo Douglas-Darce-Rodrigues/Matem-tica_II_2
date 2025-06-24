@@ -5,7 +5,16 @@ botaoMotraPalavras.addEventListener('click', mostraPalavrasChave);
 function mostraPalavrasChave (){
     const texto = document.querySelector('entrada-de-texto').Value;   
     const campoResultado = document.querySelector('resultado-palavrachave');
-    const palavras = texto.split(" ");
+    const palavras = processaTexto(texto);
 
-    campoResultado.textContent = palavras.join(", ");
+    campoResultado.textContent = palavrasChave.join(", ");
+}
+
+function processaTexto() {
+    let palavras = texto.split(/[^a-zA-Z]+/); 
+    return palavras;
+
+ 
+
+
 }
