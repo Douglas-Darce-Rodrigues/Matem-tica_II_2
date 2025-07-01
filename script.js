@@ -17,7 +17,12 @@ function processaTexto() {
     let frequencias = [];
     for(let i in palavras){
        frequencias[i] = 0;
-    for let j in palavras
+    for (let j in palavras){
+       if (palavras[i] == palavras[j]){
+             frequencias[i]++;
+            }
+
+        }
     }
    
     console.log(frequencias);
